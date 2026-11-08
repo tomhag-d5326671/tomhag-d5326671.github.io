@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>51爆料每日大赛大乱斗-每日爆料大赛日程_51爆料大乱斗看点合集</title>
+<meta name="description" content="51爆料每日大赛大乱斗是面向吃瓜与爆料爱好者的每日话题合集站，汇总每日爆料大赛赛程、热门大乱斗话题、网友观点与最新动态，提供爆点梳理、事件时间线与讨论入口，方便快速了解当天值得关注的爆料内容。">
+<meta name="keywords" content="51爆料每日大赛大乱斗,51爆料每日大赛,爆料大乱斗,每日爆料大赛,爆料话题合集">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316181f'/%3E%3Cpath d='M18 44 L30 18 L38 34 L46 22 L50 44 Z' fill='%23ffb43a'/%3E%3Ccircle cx='22' cy='22' r='4' fill='%23ff5a5f'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#12141a;
+  --bg-soft:#191c24;
+  --card:#1f232d;
+  --card-2:#252a36;
+  --line:rgba(255,255,255,.08);
+  --txt:#e9ecf3;
+  --txt-dim:#a3aab9;
+  --txt-mute:#767f90;
+  --gold:#ffb43a;
+  --red:#ff5a5f;
+  --cyan:#4fd1c5;
+  --violet:#a78bfa;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --maxw:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(900px 420px at 12% -8%, rgba(255,180,58,.10), transparent 60%),
+    radial-gradient(760px 380px at 90% 0%, rgba(167,139,250,.10), transparent 62%),
+    var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:800;letter-spacing:.2px}
+p{margin:0 0 14px}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+.dk-sec{padding:52px 0}
+.dk-sec + .dk-sec{border-top:1px solid var(--line)}
+.dk-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.dk-head h2{font-size:clamp(20px,2.4vw,27px)}
+.dk-head h2 .bar{display:inline-block;width:6px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--gold),var(--red));vertical-align:-3px;margin-right:10px}
+.dk-head .sub{color:var(--txt-mute);font-size:13.5px}
+.dk-more{font-size:13.5px;color:var(--gold);border:1px solid rgba(255,180,58,.35);padding:6px 14px;border-radius:999px;transition:.22s;white-space:nowrap}
+.dk-more:hover{background:rgba(255,180,58,.12);transform:translateY(-1px)}
+
+/* header */
+.dk-header{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:rgba(18,20,26,.82);border-bottom:1px solid var(--line)}
+.dk-nav{display:flex;align-items:center;gap:20px;height:64px}
+.dk-logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:17px;letter-spacing:.5px;flex:none}
+.dk-logo .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--gold),var(--red));display:grid;place-items:center;color:#16181f;font-size:15px;font-weight:900}
+.dk-logo em{font-style:normal;color:var(--gold)}
+.dk-links{display:flex;gap:4px;overflow:auto;scrollbar-width:none;flex:1}
+.dk-links::-webkit-scrollbar{display:none}
+.dk-links a{font-size:14px;color:var(--txt-dim);padding:7px 12px;border-radius:9px;white-space:nowrap;transition:.2s}
+.dk-links a:hover{color:var(--gold);background:rgba(255,180,58,.10)}
+.dk-pill{flex:none;font-size:13px;padding:8px 16px;border-radius:999px;background:linear-gradient(135deg,var(--gold),#ff8a3d);color:#1a1408;font-weight:800}
+
+/* hero */
+.dk-hero{padding:46px 0 40px;position:relative;overflow:hidden}
+.dk-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,180,58,.05),transparent 70%);pointer-events:none}
+.dk-hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:34px;align-items:center;position:relative}
+.dk-tagline{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--gold);border:1px solid rgba(255,180,58,.3);border-radius:999px;padding:5px 13px;margin-bottom:16px;background:rgba(255,180,58,.07)}
+.dk-tagline i{width:6px;height:6px;border-radius:50%;background:var(--red);display:inline-block;animation:dkpulse 1.6s infinite}
+@keyframes dkpulse{0%,100%{opacity:1}50%{opacity:.25}}
+.dk-hero h1{font-size:clamp(26px,3.6vw,42px);letter-spacing:.5px}
+.dk-hero h1 span{background:linear-gradient(120deg,var(--gold),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dk-hero .lead{color:var(--txt-dim);margin-top:14px;font-size:15.5px;max-width:640px}
+.dk-search{display:flex;gap:10px;margin-top:22px;max-width:560px}
+.dk-search input{flex:1;height:48px;border-radius:12px;border:1px solid var(--line);background:var(--bg-soft);color:var(--txt);padding:0 16px;font-size:14.5px;outline:none;transition:.22s}
+.dk-search input:focus{border-color:rgba(255,180,58,.55);box-shadow:0 0 0 3px rgba(255,180,58,.12)}
+.dk-search button{height:48px;padding:0 22px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--gold),#ff8a3d);color:#1a1408;font-weight:800;font-size:14.5px;cursor:pointer;transition:.2s}
+.dk-search button:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(255,180,58,.25)}
+.dk-quick{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.dk-quick a{font-size:13px;color:var(--txt-dim);background:var(--card);border:1px solid var(--line);padding:7px 13px;border-radius:9px;transition:.2s}
+.dk-quick a:hover{color:var(--gold);border-color:rgba(255,180,58,.4);transform:translateY(-2px)}
+.dk-hero-side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.dk-hero-side h3{font-size:15px;margin-bottom:14px;color:var(--gold)}
+.dk-hotlist li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.dk-hotlist li:last-child{border-bottom:none}
+.dk-hotlist b{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;font-size:12px;background:var(--card-2);color:var(--txt-mute);flex:none}
+.dk-hotlist li:nth-child(1) b{background:linear-gradient(135deg,var(--red),#ff8a6b);color:#fff}
+.dk-hotlist li:nth-child(2) b{background:linear-gradient(135deg,var(--gold),#ffd07a);color:#1a1408}
+.dk-hotlist li:nth-child(3) b{background:linear-gradient(135deg,var(--violet),#c4b5fd);color:#1a1408}
+.dk-hotlist span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dk-hotlist em{font-style:normal;font-size:12px;color:var(--txt-mute)}
+
+/* intro */
+.dk-intro{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.dk-intro p{color:var(--txt-dim);font-size:15px}
+.dk-intro .hl{color:var(--gold)}
+.dk-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.dk-fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.dk-fact strong{display:block;font-size:22px;color:var(--gold);letter-spacing:.5px}
+.dk-fact span{font-size:12.5px;color:var(--txt-mute)}
+
+/* cards */
+.dk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dk-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.dk-card:hover{transform:translateY(-4px);border-color:rgba(255,180,58,.35);box-shadow:var(--shadow)}
+.dk-cover{height:118px;position:relative;display:flex;align-items:flex-end;padding:12px}
+.dk-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.55))}
+.dk-cover .badge{position:relative;z-index:2;font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:6px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.25);color:#fff}
+.dk-cover.c1{background:linear-gradient(135deg,#ff5a5f,#7c2d12)}
+.dk-cover.c2{background:linear-gradient(135deg,#ffb43a,#b45309)}
+.dk-cover.c3{background:linear-gradient(135deg,#4fd1c5,#0f766e)}
+.dk-cover.c4{background:linear-gradient(135deg,#a78bfa,#4c1d95)}
+.dk-cover.c5{background:linear-gradient(135deg,#60a5fa,#1e3a8a)}
+.dk-cover.c6{background:linear-gradient(135deg,#f472b6,#831843)}
+.dk-card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dk-card-body h3{font-size:16.5px}
+.dk-card-body h3 a:hover{color:var(--gold)}
+.dk-tags{display:flex;flex-wrap:wrap;gap:6px}
+.dk-tag{font-size:11.5px;color:var(--cyan);background:rgba(79,209,197,.10);border:1px solid rgba(79,209,197,.22);padding:2px 8px;border-radius:6px}
+.dk-tag.w{color:var(--gold);background:rgba(255,180,58,.09);border-color:rgba(255,180,58,.24)}
+.dk-tag.r{color:#ff8a8d;background:rgba(255,90,95,.10);border-color:rgba(255,90,95,.24)}
+.dk-card-body p{font-size:13.5px;color:var(--txt-dim);margin:0;flex:1}
+.dk-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--txt-mute);border-top:1px dashed var(--line);padding-top:9px}
+
+/* list */
+.dk-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.dk-row{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;transition:.2s}
+.dk-row:hover{border-color:rgba(255,180,58,.3);background:var(--card-2)}
+.dk-row .time{font-size:12px;color:var(--gold);flex:none;width:64px;font-weight:700}
+.dk-row .nm{font-size:14.5px;flex:none;width:132px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.dk-row .ds{font-size:13px;color:var(--txt-mute);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* cats */
+.dk-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dk-cat{background:linear-gradient(160deg,var(--card-2),var(--card));border:1px solid var(--line);border-radius:14px;padding:18px;transition:.24s}
+.dk-cat:hover{transform:translateY(-3px);border-color:rgba(167,139,250,.4)}
+.dk-cat b{display:block;font-size:15.5px;margin-bottom:5px}
+.dk-cat span{font-size:12.5px;color:var(--txt-mute)}
+.dk-cat i{font-style:normal;float:right;color:var(--violet);font-size:12px}
+
+/* article */
+.dk-article{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start}
+.dk-prose h3{font-size:17.5px;margin:26px 0 10px;color:var(--txt)}
+.dk-prose h3:first-child{margin-top:0}
+.dk-prose h3:before{content:"◈";color:var(--gold);margin-right:8px;font-size:14px}
+.dk-prose p{color:var(--txt-dim);font-size:15px;text-align:justify}
+.dk-prose strong{color:var(--gold);font-weight:700}
+.dk-side{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;position:sticky;top:84px}
+.dk-side h4{font-size:15px;margin-bottom:12px;color:var(--gold)}
+.dk-side li{font-size:13.5px;color:var(--txt-dim);padding:8px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px}
+.dk-side li:last-child{border-bottom:none}
+.dk-side li:before{content:"›";color:var(--gold)}
+.dk-side .tip{margin-top:14px;font-size:12.5px;color:var(--txt-mute);line-height:1.7;background:var(--bg-soft);border-radius:10px;padding:12px}
+
+/* faq */
+.dk-faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.dk-qa{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:.2s}
+.dk-qa:hover{border-color:rgba(79,209,197,.3)}
+.dk-qa h4{font-size:15.5px;margin-bottom:8px;display:flex;gap:9px}
+.dk-qa h4 .q{flex:none;width:24px;height:24px;border-radius:7px;background:rgba(79,209,197,.14);color:var(--cyan);display:grid;place-items:center;font-size:13px}
+.dk-qa p{font-size:14px;color:var(--txt-dim);margin:0}
+
+/* comments */
+.dk-comments{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.dk-cm{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.dk-cm .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.dk-cm .who{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700}
+.dk-cm .av{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;color:#16181f;font-weight:900}
+.dk-cm .date{font-size:11.5px;color:var(--txt-mute)}
+.dk-cm p{font-size:13.5px;color:var(--txt-dim);margin:0}
+
+/* news */
+.dk-news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dk-nw{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.22s;display:flex;flex-direction:column;gap:9px}
+.dk-nw:hover{transform:translateY(-3px);border-color:rgba(255,180,58,.32)}
+.dk-nw .d{font-size:12px;color:var(--gold)}
+.dk-nw h4{font-size:15.5px}
+.dk-nw p{font-size:13.5px;color:var(--txt-mute);margin:0}
+
+/* subscribe */
+.dk-sub{background:linear-gradient(120deg,rgba(255,180,58,.12),rgba(167,139,250,.12));border:1px solid var(--line);border-radius:20px;padding:36px;text-align:center}
+.dk-sub h2{font-size:clamp(20px,2.4vw,26px);margin-bottom:10px}
+.dk-sub p{color:var(--txt-dim);max-width:640px;margin:0 auto 20px;font-size:14.5px}
+.dk-sub .dk-search{margin:0 auto;justify-content:center}
+
+/* footer */
+.dk-footer{background:#0d0f14;border-top:1px solid var(--line);padding:42px 0 26px;margin-top:10px}
+.dk-fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.dk-fgrid h5{font-size:14px;margin-bottom:12px;color:var(--gold)}
+.dk-fgrid li{font-size:13px;color:var(--txt-mute);padding:4px 0}
+.dk-fgrid li a:hover{color:var(--gold)}
+.dk-fgrid p{font-size:13px;color:var(--txt-mute)}
+.dk-copy{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;font-size:12.5px;color:var(--txt-mute);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media (max-width:980px){
+  .dk-hero-grid,.dk-intro,.dk-article{grid-template-columns:1fr}
+  .dk-grid,.dk-news{grid-template-columns:repeat(2,1fr)}
+  .dk-cats{grid-template-columns:repeat(2,1fr)}
+  .dk-side{position:static}
+  .dk-fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .dk-sec{padding:36px 0}
+  .dk-links{display:none}
+  .dk-grid,.dk-news,.dk-list,.dk-faq,.dk-comments,.dk-cats{grid-template-columns:1fr}
+  .dk-hero{padding:30px 0 26px}
+  .dk-search{flex-direction:column}
+  .dk-search button{width:100%}
+  .dk-row .ds{display:none}
+  .dk-row .nm{width:auto;flex:1}
+  .dk-fgrid{grid-template-columns:1fr}
+  .dk-sub{padding:26px 18px}
+  .dk-facts{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="dk-header">
+  <div class="wrap dk-nav">
+    <a class="dk-logo" href="/#dk-hero"><span class="mark">爆</span>51<em>爆料</em></a>
+    <nav class="dk-links" aria-label="主导航">
+      <a href="/#dk-hero">每日大赛</a>
+      <a href="/#dk-hot">热门大乱斗</a>
+      <a href="/#dk-update">最新爆料</a>
+      <a href="/#dk-cats">话题分类</a>
+      <a href="/#dk-deep">深度解析</a>
+      <a href="/#dk-faq">常见问题</a>
+      <a href="/#dk-comments">网友讨论</a>
+      <a href="/#dk-news">爆料资讯</a>
+    </nav>
+    <a class="dk-pill" href="/#dk-sub">订阅每日爆点</a>
+  </div>
+</header>
+
+<main>
+
+<section class="dk-hero" id="dk-hero">
+  <div class="wrap dk-hero-grid">
+    <div>
+      <span class="dk-tagline"><i></i>2026年11月7日 · 今日大赛已开赛</span>
+      <h1>51爆料每日大赛大乱斗 <span>今日爆点话题合集</span></h1>
+      <p class="lead">把每天散落在各处的爆料线索整理成一场有序的"大乱斗"：赛程清晰、话题分组、观点对照、时间线可追。想看今天谁在爆、爆了什么、网友怎么吵，从这一页开始就够了。</p>
+      <p class="lead">51爆料每日大赛大乱斗收录当日热门爆料主题、参赛话题看点、争议焦点与后续进展，适合碎片时间快速扫读，也适合收藏起来慢慢对照。</p>
+      <form class="dk-search" onsubmit="return false;">
+        <input type="text" placeholder="搜今天的大赛话题 / 爆料主角 / 关键词" aria-label="搜索每日大赛话题">
+        <button type="submit">开搜</button>
+      </form>
+      <div class="dk-quick">
+        <a href="/#dk-hot">今日热门榜</a>
+        <a href="/#dk-update">最新更新</a>
+        <a href="/#dk-cats">话题分类</a>
+        <a href="/#dk-deep">深度解析</a>
+        <a href="/#dk-guide">浏览指南</a>
+        <a href="/#dk-faq">常见疑问</a>
+        <a href="/#dk-comments">网友开麦</a>
+        <a href="/#dk-news">爆料资讯</a>
+      </div>
+    </div>
+    <aside class="dk-hero-side">
+      <h3>今日大乱斗 · 热度速览</h3>
+      <ul class="dk-hotlist">
+        <li><b>1</b><span>某综艺录制现场爆料对峙</span><em>98.2万</em></li>
+        <li><b>2</b><span>短剧分账数据争议大乱斗</span><em>76.5万</em></li>
+        <li><b>3</b><span>直播间选品互撕时间线</span><em>64.1万</em></li>
+        <li><b>4</b><span>新番声优阵容提前泄露</span><em>52.8万</em></li>
+        <li><b>5</b><span>电竞转会传闻集中爆发</span><em>47.3万</em></li>
+        <li><b>6</b><span>演唱会假唱质疑反转</span><em>39.6万</em></li>
+        <li><b>7</b><span>纪录片摄制组回应争议</span><em>31.2万</em></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-intro">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>51爆料每日大赛大乱斗是什么</h2>
+      <span class="sub">给吃瓜需求一个清晰的入口</span>
+    </div>
+    <div class="dk-intro">
+      <div>
+        <p>很多人搜"<span class="hl">51爆料每日大赛大乱斗</span>"，其实并不是只想看一条孤立的瓜，而是想知道今天到底有哪些话题在同时发酵、彼此之间有没有关联、哪一条值得先看。这个页面就是按这个思路搭的：把每日大赛拆成赛程、话题、人物、争议点四条线，再用大乱斗的形式把不同圈层的爆料放在一起对照。</p>
+        <p>内容覆盖综艺、短剧、直播、动漫、游戏、音乐、体育、影视等常见垂类，每条爆料都会标注类型、热度和当前状态（持续发酵 / 已回应 / 待核实），避免读者被单一说法带节奏。页面更适合想在几分钟内判断"今天该看什么"的用户，而不是愿意花两小时逐条深挖的重度考据党。</p>
+        <p>值得收藏的原因很直接：<span class="hl">51爆料每日大赛大乱斗</span>每天更新，话题会累积成时间线，隔几天回来看，能看清一个事件是怎么从爆料变成共识、又或者怎么被反转的。对内容创作者和自媒体来说，这里也是一个相对省力的选题参考池。</p>
+      </div>
+      <div class="dk-facts">
+        <div class="dk-fact"><strong>7+</strong><span>今日大赛分组话题</span></div>
+        <div class="dk-fact"><strong>24h</strong><span>爆料热度更新周期</span></div>
+        <div class="dk-fact"><strong>8</strong><span>覆盖垂类分类</span></div>
+        <div class="dk-fact"><strong>11-30</strong><span>核心词自然出现区间</span></div>
+        <div class="dk-fact"><strong>3档</strong><span>可信度分级标注</span></div>
+        <div class="dk-fact"><strong>每日</strong><span>时间线追加更新</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-hot">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>今日热门大乱斗推荐</h2>
+      <a class="dk-more" href="/#dk-update">看全部更新</a>
+    </div>
+    <div class="dk-grid">
+
+      <article class="dk-card">
+        <div class="dk-cover c1"><span class="badge">综艺 · 持续发酵</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">录制现场两种说法正面撞车</a></h3>
+          <div class="dk-tags"><span class="dk-tag r">对峙</span><span class="dk-tag w">现场爆料</span><span class="dk-tag">嘉宾阵容</span></div>
+          <p>一方称赛制临时改动，另一方晒出流程单反驳。今天大乱斗里讨论最密集的一组，双方时间点存在明显错位。</p>
+          <div class="dk-meta"><span>热度 98.2万</span><span>2小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c2"><span class="badge">短剧 · 待核实</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">分账数据被指口径不一</a></h3>
+          <div class="dk-tags"><span class="dk-tag w">数据争议</span><span class="dk-tag">分账</span><span class="dk-tag">短剧圈</span></div>
+          <p>同一部短剧出现两套播放数据，业内人士称统计口径不同。爆料方未提供原始后台截图，暂列待核实。</p>
+          <div class="dk-meta"><span>热度 76.5万</span><span>4小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c3"><span class="badge">直播 · 已回应</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">选品互撕时间线被完整扒出</a></h3>
+          <div class="dk-tags"><span class="dk-tag">带货</span><span class="dk-tag r">互撕</span><span class="dk-tag w">时间线</span></div>
+          <p>从选品会到直播口播，网友按分钟整理出完整链路。当事主播已发短声明，但未正面回应选品环节。</p>
+          <div class="dk-meta"><span>热度 64.1万</span><span>6小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c4"><span class="badge">动漫 · 持续发酵</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">新番声优阵容提前流出</a></h3>
+          <div class="dk-tags"><span class="dk-tag">声优</span><span class="dk-tag w">提前泄露</span><span class="dk-tag">追番</span></div>
+          <p>疑似官宣物料在社群流传，名单与早前访谈暗示部分吻合。制作方暂未表态，粉丝已在做阵容对比。</p>
+          <div class="dk-meta"><span>热度 52.8万</span><span>8小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c5"><span class="badge">游戏 · 待核实</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">转会传闻一夜之间集中爆发</a></h3>
+          <div class="dk-tags"><span class="dk-tag">电竞</span><span class="dk-tag w">转会</span><span class="dk-tag r">传闻</span></div>
+          <p>多个账号同一时段放出不同版本阵容，互相矛盾。目前没有俱乐部官宣，建议当作大乱斗话题看而非定论。</p>
+          <div class="dk-meta"><span>热度 47.3万</span><span>10小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c6"><span class="badge">音乐 · 已回应</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">演唱会现场质疑出现反转</a></h3>
+          <div class="dk-tags"><span class="dk-tag">演唱会</span><span class="dk-tag w">现场</span><span class="dk-tag r">反转</span></div>
+          <p>最初质疑的片段被指经过剪辑，完整版音轨流出后舆论转向。这场大乱斗的看点在于证据链怎么补全。</p>
+          <div class="dk-meta"><span>热度 39.6万</span><span>12小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c2"><span class="badge">纪录片 · 持续发酵</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">摄制组回应素材使用争议</a></h3>
+          <div class="dk-tags"><span class="dk-tag">纪录片</span><span class="dk-tag w">素材授权</span><span class="dk-tag">回应</span></div>
+          <p>争议集中在历史影像授权范围。摄制组给出补充说明，但关键授权文件仍未公开，讨论仍在继续。</p>
+          <div class="dk-meta"><span>热度 31.2万</span><span>14小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c3"><span class="badge">影视 · 待核实</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">剧集改档传闻引发档期大乱斗</a></h3>
+          <div class="dk-tags"><span class="dk-tag">改档</span><span class="dk-tag w">排播</span><span class="dk-tag">平台</span></div>
+          <p>多个排播表版本在流传，平台页面尚未调整。若最终坐实，将影响同档期三四部剧的竞争格局。</p>
+          <div class="dk-meta"><span>热度 28.7万</span><span>16小时前更新</span></div>
+        </div>
+      </article>
+
+      <article class="dk-card">
+        <div class="dk-cover c4"><span class="badge">体育 · 已回应</span></div>
+        <div class="dk-card-body">
+          <h3><a href="/#dk-hot">赛程争议由官方发文澄清</a></h3>
+          <div class="dk-tags"><span class="dk-tag">赛程</span><span class="dk-tag w">官方回应</span><span class="dk-tag">转播</span></div>
+          <p>针对临时调整的质疑，官方给出排期依据。球迷主要分歧点在于休息间隔是否合理，话题仍在延续。</p>
+          <div class="dk-meta"><span>热度 26.4万</span><span>18小时前更新</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-update">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>最新爆料动态 · 2026年11月7日</h2>
+      <span class="sub">按时间倒序，标注状态</span>
+    </div>
+    <div class="dk-list">
+      <div class="dk-row"><span class="time">09:12</span><span class="nm">综艺现场对峙</span><span class="ds">第二段现场录音被放出，与首版说法存在时间差</span></div>
+      <div class="dk-row"><span class="time">09:48</span><span class="nm">短剧分账争议</span><span class="ds">有从业者补充说明统计口径，争议范围收窄</span></div>
+      <div class="dk-row"><span class="time">10:25</span><span class="nm">直播选品互撕</span><span class="ds">当事方发布三行短声明，未涉及选品环节</span></div>
+      <div class="dk-row"><span class="time">11:06</span><span class="nm">新番声优泄露</span><span class="ds">疑似物料被删，粉丝已留存对比图</span></div>
+      <div class="dk-row"><span class="time">12:30</span><span class="nm">电竞转会传闻</span><span class="ds">第三版阵容流出，与此前两版均不相同</span></div>
+      <div class="dk-row"><span class="time">13:41</span><span class="nm">演唱会质疑反转</span><span class="ds">完整音轨发布，剪辑片段来源被追问</span></div>
+      <div class="dk-row"><span class="time">14:55</span><span class="nm">纪录片素材争议</span><span class="ds">摄制组补充授权范围说明，文件未公开</span></div>
+      <div class="dk-row"><span class="time">15:20</span><span class="nm">剧集改档传闻</span><span class="ds">平台页面未调整，排播表版本继续流传</span></div>
+      <div class="dk-row"><span class="time">16:08</span><span class="nm">体育赛程澄清</span><span class="ds">官方发文说明排期依据，休息间隔成新焦点</span></div>
+      <div class="dk-row"><span class="time">17:33</span><span class="nm">综艺嘉宾采访</span><span class="ds">受访者用一句话回应，被解读为间接承认</span></div>
+      <div class="dk-row"><span class="time">18:47</span><span class="nm">短剧平台公告</span><span class="ds">公告只谈规范统计，未点名任何作品</span></div>
+      <div class="dk-row"><span class="time">19:50</span><span class="nm">今日大赛汇总</span><span class="ds">七组话题进入收尾期，两组仍缺少关键证据</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-cats">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>大乱斗话题分类</h2>
+      <span class="sub">按垂类分组，方便横向对照</span>
+    </div>
+    <div class="dk-cats">
+      <a class="dk-cat" href="/#dk-cats"><b>综艺爆料 <i>12</i></b><span>录制现场、赛制、嘉宾阵容</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>短剧动态 <i>9</i></b><span>分账、上线节奏、爽点争议</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>直播圈话题 <i>14</i></b><span>选品、弹幕、打赏与互撕</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>动漫声优 <i>7</i></b><span>阵容泄露、制作公司、追番</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>电竞转会 <i>11</i></b><span>阵容传闻、赛事、俱乐部</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>音乐现场 <i>6</i></b><span>演唱会、音轨、假唱质疑</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>影视排播 <i>8</i></b><span>改档、收视、平台竞争</span></a>
+      <a class="dk-cat" href="/#dk-cats"><b>纪录片档案 <i>5</i></b><span>素材授权、历史影像、拍摄手法</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-deep">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>深度解析：每日大赛为什么值得看</h2>
+      <span class="sub">编辑视角 · 约900字</span>
+    </div>
+    <div class="dk-article">
+      <div class="dk-prose">
+        <h3>从"单条爆料"到"整场大赛"的阅读逻辑</h3>
+        <p>单条爆料最大的问题是信息不完整：只有一方说法，只有截取片段，只有情绪没有上下文。而<span class="hl">51爆料每日大赛大乱斗</span>尝试做的是把它们并置：同一天发生的几件事，哪些其实是同一批人在推、哪些说法互相矛盾、哪些在几小时内就被补上了证据。读者不需要接受任何一种结论，但至少能看到一场"比赛"的全貌，而不是盯着一个球看。</p>
+        <p>这种并置有个很实际的好处——它天然带有交叉验证的功能。比如今天综艺现场的对峙和短剧分账的争议，看起来毫不相关，但两者都出现了"时间点错位"这个共同问题：爆料方给出的时间与公开流程单对不上。当同一类漏洞在多个话题里重复出现，读者就会自然形成一种判断习惯：先看时间线，再看原始材料，最后才看情绪。</p>
+
+        <h3>类型差异决定看点差异</h3>
+        <p>不同垂类的爆料，吸引力完全不同。综艺和直播的看点在"人"——谁和谁对上了、谁的说法前后不一；短剧和影视的看点在"数"——分账、播放、排播，这些数字背后是平台与制作方的利益分配；动漫和音乐更偏"证据"——泄露物料、音轨、授权文件，一旦有原件流出，讨论方向会立刻改变；电竞和体育则介于两者之间，传闻多、官宣少，节奏快得让人来不及核实。</p>
+        <p>所以这个页面在推荐卡片上做了状态标注：<strong>持续发酵</strong>表示双方还在加码，<strong>已回应</strong>表示有一方给出了正式说法，<strong>待核实</strong>表示关键证据尚未出现。这不是给话题下结论，而是给读者一个预期管理——点进去之前就知道自己要花多少精力。</p>
+
+        <h3>大乱斗形式的价值与边界</h3>
+        <p>"大乱斗"这个词容易让人以为只是热闹，其实它更像一个排序工具。当七组话题同时在线，读者的注意力是有限的，页面要做的就是让重要的靠前、让争议清楚的可见、让已经收尾的退到后面。今天这七组里，综艺现场和直播选品两组的讨论密度最高，但它们的问题类型不同：前者缺的是完整时间线，后者缺的是选品环节的正面回应。</p>
+        <p>需要说清楚边界：本页不做事实裁定，也不替代当事方的正式说明。所有标注"待核实"的话题，都意味着目前公开材料不足以支撑定论。读者如果只记住一句话，希望是这句——<span class="hl">51爆料每日大赛大乱斗</span>提供的是观察角度和材料索引，不是判决书。</p>
+
+        <h3>读者搜这个词，通常想解决什么</h3>
+        <p>从搜索意图看，大部分人是想快速知道"今天有什么"，少部分人是想找"某个具体话题的后续"，还有一部分是想确认"某个说法到底靠不靠谱"。页面用首屏热度速览解决第一类，用最新动态时间线解决第二类，用状态标注和深度解析解决第三类。三类需求放在同一页，是因为它们本来就共享同一批话题，只是阅读深度不同。</p>
+        <p>对内容创作者来说，这里还有一个附加价值：能看出哪些话题具备持续追踪的潜力。一般来说，能在一天内出现两次以上"证据补充"的话题，后续还会有新进展；而那些只有单方说法、没有任何回应的，往往在两三天内就自然冷却。这种判断不保证准确，但比凭感觉选题要稳一些。</p>
+      </div>
+      <aside class="dk-side">
+        <h4>本场大赛速览</h4>
+        <ul>
+          <li>综艺现场对峙 · 缺完整时间线</li>
+          <li>短剧分账争议 · 口径问题</li>
+          <li>直播选品互撕 · 待正面回应</li>
+          <li>新番声优泄露 · 物料已删</li>
+          <li>电竞转会传闻 · 三版互相矛盾</li>
+          <li>演唱会反转 · 音轨成关键</li>
+          <li>纪录片授权 · 文件未公开</li>
+        </ul>
+        <div class="tip">提示：标注"待核实"的话题请以当事方正式说明为准，本页仅整理公开讨论与材料索引。</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-guide">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>浏览与追更体验指南</h2>
+      <span class="sub">让碎片时间也能看明白</span>
+    </div>
+    <div class="dk-grid">
+      <article class="dk-card">
+        <div class="dk-card-body">
+          <h3>先看状态，再看内容</h3>
+          <p>每张卡片左上角都有状态标签。时间紧就先点"已回应"的，想追进展就挑"持续发酵"的，"待核实"的建议留到有空时再细看。</p>
+        </div>
+      </article>
+      <article class="dk-card">
+        <div class="dk-card-body">
+          <h3>用时间线代替刷屏</h3>
+          <p>最新动态按小时排列，比不断刷新信息流更省力。一个话题从早到晚怎么变的，一条竖线看得清。</p>
+        </div>
+      </article>
+      <article class="dk-card">
+        <div class="dk-card-body">
+          <h3>分类入口横向对照</h3>
+          <p>同类话题放在一起，容易发现重复出现的说法和漏洞。比如"时间点错位"今天就在两个垂类里同时出现。</p>
+        </div>
+      </article>
+      <article class="dk-card">
+        <div class="dk-card-body">
+          <h3>移动端优先阅读</h3>
+          <p>卡片在手机上自动单列，长文段落做了行距优化。通勤路上单手滑，重点信息不会被装饰挤掉。</p>
+        </div>
+      </article>
+      <article class="dk-card">
+        <div class="dk-card-body">
+          <h3>收藏比转发更实用</h3>
+          <p>爆料类内容变化快，收藏本页隔天回看时间线，比翻聊天记录找截图效率高得多。</p>
+        </div>
+      </article>
+      <article class="dk-card">
+        <div class="dk-card-body">
+          <h3>相关推荐扩展路径</h3>
+          <p>每张卡片下方都有相关标签，点进去能看到同类型的历史话题，方便补背景而不是只看今天。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-faq">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>关于每日大赛大乱斗的常见问题</h2>
+      <span class="sub">编辑答疑 · 6问</span>
+    </div>
+    <div class="dk-faq">
+      <div class="dk-qa">
+        <h4><span class="q">Q</span>51爆料每日大赛大乱斗每天都更新吗？</h4>
+        <p>按日更新，通常在工作日上午完成当日话题整理，下午和晚间追加时间线进展。遇到热点集中爆发时会临时加更。周末视话题量适当合并，但热门话题的后续会保留追踪，不会因为隔天就断掉。</p>
+      </div>
+      <div class="dk-qa">
+        <h4><span class="q">Q</span>页面里的"待核实"是什么意思？</h4>
+        <p>表示目前公开材料不足以支撑定论，通常缺少原始文件、完整时间线或当事方正式说明。这类话题仍会展示，是因为讨论本身有参考价值，但读者应把它当作待观察项，而不是已确认的事实。</p>
+      </div>
+      <div class="dk-qa">
+        <h4><span class="q">Q</span>第一次看应该从哪个板块开始？</h4>
+        <p>建议先看首屏的热度速览，判断今天有没有你关心的垂类；再滑到最新动态看时间线，了解进展节奏；最后按兴趣进入推荐卡片或深度解析。这样比从头到尾线性阅读更省时间。</p>
+      </div>
+      <div class="dk-qa">
+        <h4><span class="q">Q</span>不同垂类的爆料看点差别大吗？</h4>
+        <p>差别明显。综艺直播重人物和说法对照，短剧影视重数据和排播，动漫音乐重物料与音轨证据，电竞体育重官宣节奏。页面按垂类分组，就是为了让读者用对应的判断方式去看，而不是一套标准套所有话题。</p>
+      </div>
+      <div class="dk-qa">
+        <h4><span class="q">Q</span>适合哪些人浏览？</h4>
+        <p>适合想快速了解当日话题的普通读者、需要选题参考的内容创作者，以及想补背景的追更用户。不太适合期待权威定论或完整调查报告的读者，本页定位是信息索引与讨论梳理。</p>
+      </div>
+      <div class="dk-qa">
+        <h4><span class="q">Q</span>类似的话题合集还有哪些可以看？</h4>
+        <p>可以顺着分类入口看同垂类的历史话题，也可以在相关资讯里找延伸专题。页面内的相关推荐会优先给同类型、同争议结构的话题，方便你横向比较不同事件的处理方式。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-comments">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>网友开麦 · 大乱斗讨论区</h2>
+      <span class="sub">近30天 · 观点不代表本站立场</span>
+    </div>
+    <div class="dk-comments">
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#ffb43a">橘</span>橘子汽水不加冰</span><span class="date">11-06</span></div><p>今天综艺那组的两个版本我都看了，时间点确实对不上，先蹲一个完整流程单再说话。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#4fd1c5">夜</span>夜航船票</span><span class="date">11-06</span></div><p>短剧分账那个我觉得是口径问题，两边说的根本不是同一个指标，吵起来有点冤。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#a78bfa">阿</span>阿柴不拆家</span><span class="date">11-05</span></div><p>直播选品互撕的时间线整理得挺清楚，不过关键那段口播还是没有正面回应，继续等。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#f472b6">小</span>小满未满</span><span class="date">11-05</span></div><p>声优阵容那个物料删得也太快了，反而让人觉得是真的，粉丝留存图已经在传了。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#60a5fa">北</span>北纬三十度</span><span class="date">11-04</span></div><p>电竞转会三版阵容互相矛盾，这种时候还是等俱乐部官宣吧，每年都要被遛一次。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#ff5a5f">酸</span>酸奶盖儿</span><span class="date">11-04</span></div><p>演唱会那段反转挺典型的，先放剪辑片段带节奏，完整音轨一出就没人提了。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#ffb43a">星</span>星野拾光</span><span class="date">11-03</span></div><p>纪录片授权那个文件一直没公开，摄制组的说明写得挺客气但没解决核心问题。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#4fd1c5">慢</span>慢半拍选手</span><span class="date">11-03</span></div><p>这个页面最实用的其实是状态标注，一眼知道哪个不用急着追，省了不少时间。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#a78bfa">猫</span>猫在窗台</span><span class="date">11-02</span></div><p>剧集改档的传闻版本太多了，平台页面没动之前我都不太信，去年就吃过亏。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#f472b6">一</span>一只小台灯</span><span class="date">11-02</span></div><p>体育赛程的官方澄清来得挺快，不过休息间隔那个点确实值得讨论，球迷说得也有道理。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#60a5fa">南</span>南风知意</span><span class="date">11-01</span></div><p>我觉得大乱斗这个形式挺好，把同一天的事放一起看，能发现很多重复的套路。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#ff5a5f">火</span>火锅配冰粉</span><span class="date">10-31</span></div><p>综艺嘉宾那句回应太模糊了，说是间接承认也行，说是被曲解也行，看后续吧。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#ffb43a">风</span>风里有信</span><span class="date">10-30</span></div><p>短剧平台那个公告只谈规范不谈具体作品，感觉是想把事情压下来而不是解决。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#4fd1c5">木</span>木木夕</span><span class="date">10-29</span></div><p>希望深度解析能多写点同类对比，比如两个时间线错位的事件放一起看会更有意思。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#a78bfa">半</span>半糖去冰</span><span class="date">10-28</span></div><p>每天刷一遍最新动态就够了，不用去各个群里翻截图，这点体验确实不错。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#f472b6">小</span>小鹿乱撞</span><span class="date">10-27</span></div><p>动漫那块如果能把制作公司也标出来就好了，阵容泄露和公司排期关系挺大的。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#60a5fa">蓝</span>蓝调时刻</span><span class="date">10-26</span></div><p>今天七组话题里，我觉得只有两组还有后续，其他基本是收尾状态了，判断挺准。</p></div>
+      <div class="dk-cm"><div class="top"><span class="who"><span class="av" style="background:#ff5a5f">热</span>热心市民老周</span><span class="date">10-25</span></div><p>别的不说，至少这个页面没有把传闻写成定论，待核实标注还算克制。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-news">
+  <div class="wrap">
+    <div class="dk-head">
+      <h2><span class="bar"></span>相关爆料资讯</h2>
+      <a class="dk-more" href="/#dk-sub">订阅更新</a>
+    </div>
+    <div class="dk-news">
+      <article class="dk-nw">
+        <span class="d">2026-11-07</span>
+        <h4>今日大赛七组话题进入收尾期，两组仍缺关键证据</h4>
+        <p>综艺现场与纪录片授权两组讨论密度下降，但核心材料仍未公开。编辑建议关注后续正式说明。</p>
+      </article>
+      <article class="dk-nw">
+        <span class="d">2026-11-06</span>
+        <h4>直播选品互撕时间线完整版流出，选品环节成焦点</h4>
+        <p>网友按分钟整理完整链路，当事方短声明未涉及选品，话题热度保持高位。</p>
+      </article>
+      <article class="dk-nw">
+        <span class="d">2026-11-05</span>
+        <h4>新番声优阵容物料被删，粉丝留存对比图继续流传</h4>
+        <p>疑似官宣物料在社群短暂出现后被删除，制作方暂未表态，阵容吻合度成为讨论重点。</p>
+      </article>
+      <article class="dk-nw">
+        <span class="d">2026-11-04</span>
+        <h4>演唱会质疑出现反转，完整音轨成关键证据</h4>
+        <p>最初流传片段被指经过剪辑，完整版发布后舆论转向，剪辑来源成为新追问对象。</p>
+      </article>
+      <article class="dk-nw">
+        <span class="d">2026-11-03</span>
+        <h4>短剧分账争议范围收窄，从业者补充统计口径说明</h4>
+        <p>两套数据被指使用不同指标，平台公告只谈规范不谈具体作品，争议逐步降温。</p>
+      </article>
+      <article class="dk-nw">
+        <span class="d">2026-11-02</span>
+        <h4>电竞转会传闻集中爆发，三版阵容互相矛盾</h4>
+        <p>多个账号同一时段放出不同版本，均无俱乐部官宣。建议按传闻看待，等待正式公告。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dk-sec" id="dk-sub">
+  <div class="wrap">
+    <div class="dk-sub">
+      <h2>不想每天翻群找截图？订阅每日爆点</h2>
+      <p>留下一个你常用的搜索习惯，每天用一页时间看清 51爆料每日大赛大乱斗 的全部进展。我们只做整理与索引，不替你下结论。</p>
+      <form class="dk-search" onsubmit="return false;">
+        <input type="text" placeholder="输入你想持续关注的话题关键词" aria-label="订阅话题关键词">
+        <button type="submit">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="dk-footer">
+  <div class="wrap">
+    <div class="dk-fgrid">
+      <div>
+        <h5>关于本站</h5>
+        <p>51爆料每日大赛大乱斗是一个话题整理型内容页，聚焦每日爆料大赛的赛程、话题与进展，提供索引、分类与讨论梳理，不做事实裁定。</p>
+      </div>
+      <div>
+        <h5>栏目导航</h5>
+        <ul>
+          <li><a href="/#dk-hero">每日大赛首页</a></li>
+          <li><a href="/#dk-hot">热门大乱斗</a></li>
+          <li><a href="/#dk-update">最新爆料</a></li>
+          <li><a href="/#dk-cats">话题分类</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>阅读帮助</h5>
+        <ul>
+          <li><a href="/#dk-deep">深度解析</a></li>
+          <li><a href="/#dk-guide">浏览指南</a></li>
+          <li><a href="/#dk-faq">常见问题</a></li>
+          <li><a href="/#dk-comments">网友讨论</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <ul>
+          <li><a href="/#dk-news">资讯合作位</a></li>
+          <li><a href="/#dk-cats">垂类站点互换</a></li>
+          <li><a href="/#dk-sub">内容投稿入口</a></li>
+          <li><a href="/#dk-faq">纠错与反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dk-copy">
+      <span>© 2026 51爆料每日大赛大乱斗 · 内容整理页 · 保留所有权利</span>
+      <span>免责声明：本页信息来自公开讨论整理，不构成任何事实认定，请以当事方正式说明为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
