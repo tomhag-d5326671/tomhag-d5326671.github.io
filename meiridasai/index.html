@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日大赛r星-游戏赛事速递_每日大赛r星赛程与高光解析</title>
+  <meta name="description" content="每日大赛r星是游戏玩家关注的赛事资讯平台，每日更新赛程、高光时刻与选手动态。这里提供每日大赛r星玩法解析、热门对局盘点与社区讨论，助你快速掌握每日大赛r星最新看点，不错过任何一场精彩对决。">
+  <meta name="keywords" content="每日大赛r星,每日大赛r星赛程,游戏赛事,每日大赛r星高光,游戏玩家社区">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a1e2e'/%3E%3Cpath d='M30 25 L70 25 L70 40 L45 40 L45 55 L65 55 L65 70 L30 70 Z' fill='%23ffb74d'/%3E%3Ccircle cx='72' cy='72' r='12' fill='%234fc3f7'/%3E%3C/svg%3E">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --bg-deep: #0d1017;
+      --bg-card: #151b26;
+      --bg-soft: #1b2330;
+      --border-light: #2a3442;
+      --text-primary: #eef2f8;
+      --text-secondary: #a7b4c6;
+      --accent-gold: #ffb74d;
+      --accent-blue: #4fc3f7;
+      --accent-purple: #b388ff;
+      --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.6);
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --font-mono: 'SF Mono', 'Fira Code', monospace;
+      --max-width: 1200px;
+    }
+    body {
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+    .site-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    /* 导航 */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-light);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(145deg, var(--accent-gold), #e65100);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0d1017;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+    .nav-search {
+      padding: 8px 16px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-search input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      width: 160px;
+    }
+    .nav-search input::placeholder {
+      color: #5f6c80;
+    }
+    /* Banner */
+    .rstar-banner {
+      margin: 28px 0 20px;
+      background: radial-gradient(circle at 80% 20%, #1e2a3a, #0b0f16);
+      border-radius: var(--radius-md);
+      padding: 40px 36px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .banner-text h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .banner-text h1 span {
+      color: var(--accent-gold);
+    }
+    .banner-desc {
+      color: var(--text-secondary);
+      max-width: 520px;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+    .banner-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .btn-pill {
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      padding: 8px 20px;
+      border-radius: 40px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .btn-pill:hover {
+      background: #2a3648;
+      border-color: var(--accent-gold);
+    }
+    .btn-pill.primary {
+      background: var(--accent-gold);
+      color: #0d1017;
+      border-color: var(--accent-gold);
+      font-weight: 700;
+    }
+    .banner-cover-stack {
+      display: flex;
+      gap: -10px;
+      margin-right: 10px;
+    }
+    .cover-placeholder {
+      width: 80px;
+      height: 100px;
+      background: linear-gradient(145deg, #2b3b4e, #151b26);
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5f6c80;
+      font-size: 28px;
+    }
+    /* 通用section */
+    .section {
+      margin: 48px 0;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title:before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 24px;
+      background: var(--accent-gold);
+      border-radius: 4px;
+    }
+    .section-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px dashed var(--border-light);
+    }
+    /* 分类入口 */
+    .category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .category-chip {
+      background: var(--bg-soft);
+      padding: 10px 22px;
+      border-radius: 40px;
+      border: 1px solid var(--border-light);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      transition: 0.2s;
+      cursor: default;
+    }
+    .category-chip:hover {
+      border-color: var(--accent-blue);
+      background: #1f2b3b;
+    }
+    /* 推荐卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .game-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
+      border: 1px solid var(--border-light);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .game-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: #3e4a5c;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+    .tag {
+      background: #232d3b;
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 30px;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+    }
+    .tag.hot {
+      background: #3d2a1a;
+      color: var(--accent-gold);
+    }
+    .game-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 4px 0 2px;
+    }
+    .card-desc {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: #6d7b8e;
+      margin-top: 6px;
+      border-top: 1px solid var(--border-light);
+      padding-top: 10px;
+    }
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .update-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .update-name {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .update-time {
+      font-size: 0.8rem;
+      color: #7b8ba0;
+      font-family: var(--font-mono);
+    }
+    .update-badge {
+      background: #1e3a2e;
+      color: #6fcf97;
+      padding: 2px 10px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    /* 深度解析正文 */
+    .deep-dive {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 32px 36px;
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-dive h3 {
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      margin: 20px 0 12px;
+      font-weight: 700;
+    }
+    .deep-dive h3:first-child {
+      margin-top: 0;
+    }
+    .deep-dive p {
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .deep-dive strong {
+      color: var(--accent-gold);
+    }
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .faq-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 20px 22px;
+      border: 1px solid var(--border-light);
+    }
+    .faq-q {
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      display: flex;
+      gap: 8px;
+    }
+    .faq-q::before {
+      content: 'Q';
+      color: var(--accent-gold);
+      font-weight: 800;
+    }
+    .faq-a {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      padding-left: 20px;
+    }
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .comment-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      border: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .comment-user {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #7b8ba0;
+    }
+    .comment-user span:first-child {
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+    .comment-text {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    /* 资讯 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 18px;
+    }
+    .news-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      border: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .news-date {
+      font-size: 0.75rem;
+      color: #7b8ba0;
+      font-family: var(--font-mono);
+    }
+    .news-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .news-summary {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    /* 页脚 */
+    .site-footer {
+      margin-top: 60px;
+      padding: 32px 0 20px;
+      border-top: 1px solid var(--border-light);
+      color: #6d7b8e;
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #6d7b8e;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .banner-text h1 { font-size: 1.8rem; }
+      .rstar-banner { padding: 28px 20px; }
+      .banner-cover-stack { display: none; }
+      .nav-links { gap: 14px; font-size: 0.85rem; }
+      .deep-dive { padding: 24px 18px; }
+      .section-title { font-size: 1.3rem; }
+    }
+    @media (max-width: 480px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .nav-search { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- 顶部导航 -->
+    <header class="nav-bar">
+      <div class="logo-badge">
+        <div class="logo-icon">R</div>
+        <span>每日大赛r星</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/#rstar-home">首页</a>
+        <a href="/#rstar-hot">热门赛事</a>
+        <a href="/#rstar-rank">排行榜</a>
+        <a href="/#rstar-deep">深度解析</a>
+        <a href="/#rstar-faq">常见问题</a>
+        <a href="/#rstar-news">资讯</a>
+      </nav>
+      <div class="nav-search">
+        <span>🔍</span>
+        <input type="text" placeholder="搜索每日大赛r星...">
+      </div>
+    </header>
+
+    <!-- Banner 区域 -->
+    <section id="rstar-home" class="rstar-banner">
+      <div class="banner-text">
+        <h1>每日大赛r星 · 全天候赛事速递</h1>
+        <p class="banner-desc">追踪每日大赛r星最新赛程、高光操作与选手动态。从早间对局到晚场决赛，一站式掌握每日大赛r星所有看点。</p>
+        <div class="banner-buttons">
+          <a href="/#rstar-hot" class="btn-pill primary">今日焦点</a>
+          <a href="/#rstar-rank" class="btn-pill">实时榜单</a>
+          <a href="/#rstar-deep" class="btn-pill">玩法解析</a>
+          <a href="/#rstar-faq" class="btn-pill">赛制答疑</a>
+          <a href="/#rstar-news" class="btn-pill">最新资讯</a>
+          <a href="/#rstar-comment" class="btn-pill">社区讨论</a>
+          <a href="/#rstar-update" class="btn-pill">更新追踪</a>
+        </div>
+      </div>
+      <div class="banner-cover-stack">
+        <div class="cover-placeholder">🏆</div>
+        <div class="cover-placeholder" style="margin-left:-20px;">⚡</div>
+        <div class="cover-placeholder" style="margin-left:-20px;">🎯</div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·快捷分类</h2>
+        <a href="/#rstar-rank" class="section-link">查看全部分类 →</a>
+      </div>
+      <div class="category-grid">
+        <div class="category-chip">🔥 今日热门对局</div>
+        <div class="category-chip">⚔️ 竞技对抗</div>
+        <div class="category-chip">🎮 休闲娱乐赛</div>
+        <div class="category-chip">📊 数据排行</div>
+        <div class="category-chip">🎬 高光回放</div>
+        <div class="category-chip">🗓️ 赛程日历</div>
+        <div class="category-chip">👥 选手专访</div>
+        <div class="category-chip">🧠 战术分析</div>
+      </div>
+    </section>
+
+    <!-- 热门推荐 -->
+    <section id="rstar-hot" class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·热门内容推荐</h2>
+        <a href="/#rstar-rank" class="section-link">更多推荐 →</a>
+      </div>
+      <div class="card-grid">
+        <article class="game-card">
+          <div class="card-tags"><span class="tag hot">今日必看</span><span class="tag">决赛</span></div>
+          <h3>每日大赛r星·巅峰决赛日</h3>
+          <p class="card-desc">四支顶尖战队会师决赛，BO5拉满五局，操作细节与心理博弈看点十足。</p>
+          <div class="card-meta"><span>🔥 热度 9.8w</span><span>今日 20:00</span></div>
+        </article>
+        <article class="game-card">
+          <div class="card-tags"><span class="tag">新版本</span><span class="tag">速通</span></div>
+          <h3>每日大赛r星·速通挑战赛</h3>
+          <p class="card-desc">新版本更新后首个速通赛事，选手们对地图的理解将决定胜负走向。</p>
+          <div class="card-meta"><span>🔥 热度 7.2w</span><span>今日 18:30</span></div>
+        </article>
+        <article class="game-card">
+          <div class="card-tags"><span class="tag">高光</span><span class="tag">操作</span></div>
+          <h3>每日大赛r星·极限反杀集锦</h3>
+          <p class="card-desc">残血1v3、盲视野预判、极限拆包，每日大赛r星高光时刻一次看全。</p>
+          <div class="card-meta"><span>🔥 热度 6.5w</span><span>2小时前更新</span></div>
+        </article>
+        <article class="game-card">
+          <div class="card-tags"><span class="tag">数据</span><span class="tag">榜单</span></div>
+          <h3>每日大赛r星·本周选手数据榜</h3>
+          <p class="card-desc">击杀、助攻、生存率多维数据对比，谁才是每日大赛r星本周MVP？</p>
+          <div class="card-meta"><span>📊 综合评分 9.2</span><span>今日 14:00</span></div>
+        </article>
+        <article class="game-card">
+          <div class="card-tags"><span class="tag">战术</span><span class="tag">解析</span></div>
+          <h3>每日大赛r星·双人协作战术拆解</h3>
+          <p class="card-desc">从选点到技能衔接，深度复盘每日大赛r星双人组队战术的制胜逻辑。</p>
+          <div class="card-meta"><span>🔥 热度 5.4w</span><span>昨日更新</span></div>
+        </article>
+        <article class="game-card">
+          <div class="card-tags"><span class="tag">娱乐</span><span class="tag">主播</span></div>
+          <h3>每日大赛r星·主播娱乐表演赛</h3>
+          <p class="card-desc">人气主播随机组队，娱乐模式大乱斗，笑点与操作齐飞。</p>
+          <div class="card-meta"><span>🔥 热度 4.8w</span><span>今日 21:30</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section id="rstar-update" class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·最新动态</h2>
+        <span class="section-link">2026年11月7日 更新</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item"><span class="update-name">🔹 每日大赛r星·职业组半决赛BO3</span><span class="update-badge">正在进行</span><span class="update-time">10:30</span></div>
+        <div class="update-item"><span class="update-name">🔸 新地图“霓虹港”加入每日大赛r星地图池</span><span class="update-badge">版本更新</span><span class="update-time">09:15</span></div>
+        <div class="update-item"><span class="update-name">🔹 选手“夜风”达成每日大赛r星1000击杀里程碑</span><span class="update-badge">里程碑</span><span class="update-time">08:40</span></div>
+        <div class="update-item"><span class="update-name">🔸 每日大赛r星·大众赛道报名开启</span><span class="update-badge">报名中</span><span class="update-time">08:00</span></div>
+        <div class="update-item"><span class="update-name">🔹 昨日高光：残局1v4极限翻盘</span><span class="update-badge">回放上线</span><span class="update-time">07:20</span></div>
+        <div class="update-item"><span class="update-name">🔸 每日大赛r星·解说阵容公布</span><span class="update-badge">阵容官宣</span><span class="update-time">06:50</span></div>
+        <div class="update-item"><span class="update-name">🔹 每日大赛r星社区投票：本周最佳操作</span><span class="update-badge">投票中</span><span class="update-time">06:10</span></div>
+        <div class="update-item"><span class="update-name">🔸 每日大赛r星·新手教学直播</span><span class="update-badge">预告</span><span class="update-time">05:30</span></div>
+      </div>
+    </section>
+
+    <!-- 深度解析正文 -->
+    <section id="rstar-deep" class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·深度解析</h2>
+      </div>
+      <div class="deep-dive">
+        <h3>每日大赛r星到底是什么？为什么值得每天关注</h3>
+        <p>每天打开社区的玩家，大概率会先扫一眼“每日大赛r星”的更新——这已经成了一种习惯。它并不是单一赛事，而是一个覆盖全天多个时段、包含职业与大众赛道的综合竞技内容集合。从清晨的积分赛、下午的娱乐表演赛，到晚间黄金时段的决赛，<strong>每日大赛r星</strong> 用高密度、快节奏的方式把一整天的对局串联起来。对于喜欢看操作、学战术或者纯粹享受对抗氛围的玩家来说，它提供了一个几乎不需要等待的内容流。</p>
+        <h3>内容结构与节奏：为什么“每日”两个字很关键</h3>
+        <p>很多赛事一周只有一两场，看完就进入空窗期。而 <strong>每日大赛r星</strong> 的核心优势恰恰在于“每日”二字：每天都有新对局、新数据、新话题。职业选手的稳定发挥、路人王的黑马逆袭、新版本带来的战术变化，都会在24小时内出现。这种高频更新让社区讨论有了持续燃料，也让观众不必担心错过某个关键节点。页面里“最新动态”模块的作用就是把这些碎片化的更新按时间线聚合，方便快速浏览。</p>
+        <h3>选手与战术：每日大赛r星有哪些看点</h3>
+        <p>从选手维度看，每日大赛r星的参赛阵容覆盖面很广：既有常年霸榜的职业选手，也有从大众赛道杀出来的新面孔。职业选手的优势在于细节处理和大赛心态，而新面孔往往能带来非常规的战术选择。比如近期比赛中偏重地图控制的双人协作战术，就是由两支大众赛道队伍率先带起来的。另外，每日大赛r星的地图池会跟随版本调整，新地图“霓虹港”加入后，围绕高点控制和侧道突袭的战术变化值得重点关注。</p>
+        <h3>适合哪些人看？消费建议与同类对比</h3>
+        <p>如果你追求高强度的竞技对抗，可以优先关注晚间职业组决赛；如果更偏爱轻松氛围，主播娱乐表演赛和大众赛道更适合下饭。与专注单一项目的硬核赛事相比，<strong>每日大赛r星</strong> 的内容层次更丰富，但单场深度可能略浅——这恰好是它的定位：用广度覆盖更多观众的娱乐与学习需求。搜索这个词的用户，通常是想快速了解今天有什么可看、有什么新变化，因此页面把“今日焦点”和“最新动态”放在靠前位置，减少翻找成本。</p>
+        <p>从社区讨论来看，每日大赛r星的一个有趣现象是“操作党”和“战术党”经常能聊到一块儿去。高光集锦负责传播度，深度解析负责沉淀硬核内容，两者共同构成了这个关键词背后的内容生态。对于内容消费者来说，收藏这个页面意味着每天都能在同一个入口找到最新的对局信息、选手动态和社区风向，不用在多个平台之间来回切换。</p>
+      </div>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">浏览体验指南</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+        <div style="background:var(--bg-card);border-radius:var(--radius-sm);padding:18px;border:1px solid var(--border-light);">
+          <h4 style="color:var(--accent-gold);margin-bottom:6px;">📌 信息聚合清晰</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;">赛程、榜单、高光、资讯分栏呈现，无需在多个页面间跳转。</p>
+        </div>
+        <div style="background:var(--bg-card);border-radius:var(--radius-sm);padding:18px;border:1px solid var(--border-light);">
+          <h4 style="color:var(--accent-gold);margin-bottom:6px;">📱 移动端适配</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;">卡片式布局在手机上自动折叠，阅读和浏览操作都很顺手。</p>
+        </div>
+        <div style="background:var(--bg-card);border-radius:var(--radius-sm);padding:18px;border:1px solid var(--border-light);">
+          <h4 style="color:var(--accent-gold);margin-bottom:6px;">🔁 追更友好</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;">最新动态按时间线排列，每天刷新即可掌握每日大赛r星新变化。</p>
+        </div>
+        <div style="background:var(--bg-card);border-radius:var(--radius-sm);padding:18px;border:1px solid var(--border-light);">
+          <h4 style="color:var(--accent-gold);margin-bottom:6px;">🧭 拓展推荐</h4>
+          <p style="color:var(--text-secondary);font-size:0.9rem;">从赛事卡片可以自然跳转到相关解析、选手数据和社区讨论。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="rstar-faq" class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-q">每日大赛r星每天都有比赛吗？</div>
+          <div class="faq-a">是的，按照目前的内容排期，每日大赛r星基本保持每天都有对局安排，包括职业组积分赛、大众赛道以及娱乐表演赛。具体场次会因版本更新或节假日微调，建议关注页面顶部的最新动态模块。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">看每日大赛r星需要了解游戏基础吗？</div>
+          <div class="faq-a">有基础体验会更好，但不了解游戏也能看得很开心。娱乐表演赛和主播局的门槛较低，主要看操作和节目效果；如果想看懂职业组的战术博弈，可以配合页面里的深度解析一起阅读。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">每日大赛r星和同类赛事有什么区别？</div>
+          <div class="faq-a">最大区别在于“每日”和“多赛道并行”。相比周赛制，每日大赛r星的内容更新频率更高；同时职业与大众赛道混合呈现，既有高水平对抗也有草根逆袭故事，观众可以根据兴趣自由选择观看重点。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">如何快速找到每日大赛r星的高光回放？</div>
+          <div class="faq-a">页面“热门内容推荐”里有专门的高光卡片入口，最新动态中也会标注“回放上线”。另外社区讨论区经常有用户自发整理的时间戳，适合按关键词检索。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">每日大赛r星适合新手从哪看起？</div>
+          <div class="faq-a">推荐先看大众赛道或娱乐表演赛，节奏轻松、解说友好；等熟悉了基本规则后，再过渡到职业组比赛，并搭配战术解析内容理解细节。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">每日大赛r星的榜单多久更新一次？</div>
+          <div class="faq-a">选手数据榜和热度榜单通常在每个比赛日结束后更新，综合评分则按周汇总。具体更新时间会随赛程变化，建议每天查看一次最新动态。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section id="rstar-comment" class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·社区评论</h2>
+        <span class="section-link">近30天</span>
+      </div>
+      <div class="comment-grid">
+        <div class="comment-item"><div class="comment-user"><span>@夜风不眠</span><span>11-05</span></div><div class="comment-text">今天半决赛第三局那个残局处理太冷静了，每日大赛r星果然每天都有惊喜。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@小圆冲鸭</span><span>11-06</span></div><div class="comment-text">新地图霓虹港的节奏好快，职业选手也有点不适应，希望多来几场看看战术演变。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@老猫看比赛</span><span>11-04</span></div><div class="comment-text">娱乐赛比正赛还下饭，主播队各种迷之操作，笑死。每日大赛r星的氛围确实轻松。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@数据控阿哲</span><span>11-03</span></div><div class="comment-text">选手数据榜更新了，击杀榜前二咬得很紧，感觉本周MVP还有悬念。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@橘子汽水</span><span>11-02</span></div><div class="comment-text">偶尔觉得每日大赛r星赛程太密了，选手们能吃得消吗？不过作为观众确实看得很爽。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@战术板本人</span><span>11-01</span></div><div class="comment-text">双人协作那篇解析写得不错，把选点和技能衔接讲得很清楚，建议多出这种内容。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@阿七不熬夜</span><span>10-31</span></div><div class="comment-text">每日大赛r星晚间档时间对上班族挺友好的，吃完晚饭正好看决赛。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@薄荷绿</span><span>10-30</span></div><div class="comment-text">大众赛道有几个新人操作挺亮眼，就是稳定性差了点，期待后续表现。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@键盘飞行员</span><span>10-29</span></div><div class="comment-text">高光集锦更新有点慢，希望官方多剪一些第一视角，学操作更方便。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@南风知我意</span><span>10-28</span></div><div class="comment-text">每日大赛r星的解说组合挺有意思，一个冷静分析一个激情输出，配合得不错。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@午夜场常客</span><span>10-27</span></div><div class="comment-text">昨天那场1v4翻盘我看了三遍，每日大赛r星的高光质量确实可以。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@不吃香菜</span><span>10-26</span></div><div class="comment-text">希望页面能加一个赛程订阅提醒，有时候忙起来就忘了看每日大赛r星。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@冷面笑匠</span><span>10-25</span></div><div class="comment-text">娱乐赛有人选奇葩阵容，节目效果拉满，建议每周固定一期。</div></div>
+        <div class="comment-item"><div class="comment-user"><span>@追光少年</span><span>10-24</span></div><div class="comment-text">职业组和大众组水平差距还是明显的，不过大众赛道的故事性更强。</div></div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section id="rstar-news" class="section">
+      <div class="section-header">
+        <h2 class="section-title">每日大赛r星·相关资讯</h2>
+        <a href="/#rstar-home" class="section-link">返回首页 →</a>
+      </div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-date">2026-11-07</div>
+          <div class="news-title">每日大赛r星新版本首周数据：地图胜率榜出炉</div>
+          <div class="news-summary">霓虹港上线后胜率稳定在52%，成为新的战术必争之地。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-06</div>
+          <div class="news-title">选手“夜风”达成每日大赛r星千杀成就</div>
+          <div class="news-summary">职业生涯第1000次击杀达成，赛后采访透露状态正佳。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-05</div>
+          <div class="news-title">每日大赛r星大众赛道报名人数创新高</div>
+          <div class="news-summary">本月大众赛道报名人数突破五万，草根选手迎来更多展示机会。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-04</div>
+          <div class="news-title">每日大赛r星解说阵容公布：三位新解说加入</div>
+          <div class="news-summary">新解说带来不同视角的分析，社区反馈整体积极。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-03</div>
+          <div class="news-title">每日大赛r星高光集锦：本周最佳操作投票开启</div>
+          <div class="news-summary">五个候选操作公布，社区投票通道已开启，参与可获积分。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-02</div>
+          <div class="news-title">每日大赛r星赛程微调：周末决赛提前半小时</div>
+          <div class="news-summary">为配合平台活动，本周六决赛时间调整至19:30，请留意变动。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div>
+        <p>© 2026 每日大赛r星 · 内容资讯站</p>
+        <p style="margin-top:6px;">本站内容为游戏赛事资讯聚合展示，与官方赛事无直接隶属关系。数据与赛程信息仅供参考。</p>
+      </div>
+      <div class="footer-links">
+        <a href="/#rstar-home">首页</a>
+        <a href="/#rstar-hot">热门赛事</a>
+        <a href="/#rstar-rank">排行榜</a>
+        <a href="/#rstar-deep">深度解析</a>
+        <a href="/#rstar-faq">FAQ</a>
+        <a href="/#rstar-news">资讯</a>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+            </html>
