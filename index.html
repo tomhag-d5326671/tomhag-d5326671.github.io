@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>神马影视-最新剧集推荐_热播影视大全与深度解析</title>
+  <meta name="description" content="神马影视聚合最新热门剧集、电影与综艺，提供深度影视解析、热播榜单、用户真实评论与更新动态，助你高效发现值得看的好内容。">
+  <meta name="keywords" content="神马影视,热播剧集,影视推荐,最新电影,影视解析">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231f2a4a'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='%23f5c542' text-anchor='middle'%3E神%3C/text%3E%3C/svg%3E">
+  <style>
+    /* 全局变量与重置 */
+    :root {
+      --bg-body: #f8f9fc;
+      --surface: #ffffff;
+      --text-primary: #1a1e2b;
+      --text-secondary: #4a4f5e;
+      --text-muted: #7a7f8e;
+      --brand-dark: #1f2a4a;
+      --brand-gold: #f5c542;
+      --brand-accent: #3a6ea5;
+      --brand-soft: #eef2f9;
+      --border-light: #e2e6f0;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.12);
+      --radius-card: 18px;
+      --radius-btn: 30px;
+      --radius-small: 10px;
+      --max-width: 1240px;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul, ol {
+      list-style: none;
+    }
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+    .sm-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* 通用卡片 */
+    .sm-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    /* 按钮 */
+    .sm-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      background: var(--surface);
+      color: var(--brand-dark);
+      border: 1px solid var(--border-light);
+    }
+    .sm-btn-primary {
+      background: var(--brand-dark);
+      color: #fff;
+      border: none;
+    }
+    .sm-btn-primary:hover {
+      background: #2b3a60;
+    }
+    .sm-btn-gold {
+      background: var(--brand-gold);
+      color: #1a1e2b;
+    }
+    .sm-btn-gold:hover {
+      background: #e6b83c;
+    }
+    /* 顶部导航 */
+    .sm-header {
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .sm-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .sm-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      letter-spacing: -0.5px;
+    }
+    .sm-logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--brand-dark);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-gold);
+      font-weight: 900;
+      font-size: 1.4rem;
+    }
+    .sm-nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .sm-nav-links a {
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+      font-size: 0.98rem;
+    }
+    .sm-nav-links a:hover {
+      color: var(--brand-dark);
+    }
+    .sm-nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+    .sm-search-mini {
+      display: flex;
+      align-items: center;
+      background: var(--brand-soft);
+      border-radius: 40px;
+      padding: 6px 16px;
+      gap: 8px;
+    }
+    .sm-search-mini input {
+      border: none;
+      background: transparent;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      outline: none;
+      width: 180px;
+    }
+    .sm-search-mini input::placeholder {
+      color: var(--text-muted);
+    }
+    /* 移动端菜单按钮 */
+    .sm-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--brand-dark);
+    }
+    /* Banner 区域 */
+    .sm-hero {
+      background: linear-gradient(135deg, #f0f4fe 0%, #ffffff 100%);
+      padding: 48px 0 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .sm-hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sm-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+    .sm-hero h1 span {
+      color: var(--brand-accent);
+    }
+    .sm-hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin-bottom: 8px;
+    }
+    .sm-hero-search {
+      display: flex;
+      align-items: center;
+      background: var(--surface);
+      border-radius: 60px;
+      box-shadow: var(--shadow-md);
+      padding: 6px 6px 6px 24px;
+      max-width: 600px;
+      border: 1px solid var(--border-light);
+    }
+    .sm-hero-search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      padding: 14px 0;
+      background: transparent;
+    }
+    .sm-hero-search button {
+      background: var(--brand-dark);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .sm-hero-search button:hover {
+      background: #2b3a60;
+    }
+    .sm-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-top: 8px;
+    }
+    .sm-hero-tags a {
+      font-size: 0.9rem;
+      background: var(--surface);
+      padding: 6px 18px;
+      border-radius: 30px;
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+    .sm-hero-tags a:hover {
+      background: var(--brand-dark);
+      color: #fff;
+      border-color: var(--brand-dark);
+    }
+    /* 板块标题 */
+    .sm-section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sm-section-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+    .sm-section {
+      padding: 56px 0;
+    }
+    /* 推荐卡片网格 */
+    .sm-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .sm-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    /* 卡片内部样式 */
+    .sm-rec-card {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sm-rec-cover {
+      height: 140px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #d9e2f0, #cbd5e6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      background-size: cover;
+      background-position: center;
+    }
+    .sm-rec-cover.grad1 { background: linear-gradient(135deg, #f5c542, #e6a830); }
+    .sm-rec-cover.grad2 { background: linear-gradient(135deg, #6b8cae, #3a6ea5); }
+    .sm-rec-cover.grad3 { background: linear-gradient(135deg, #b8c6db, #8a9bb5); }
+    .sm-rec-cover.grad4 { background: linear-gradient(135deg, #c3a0c9, #9b7b9e); }
+    .sm-rec-cover.grad5 { background: linear-gradient(135deg, #a3c9b8, #6b9e8a); }
+    .sm-rec-cover.grad6 { background: linear-gradient(135deg, #f0b8b8, #d98c8c); }
+    .sm-rec-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+    .sm-rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .sm-rec-tag {
+      background: var(--brand-soft);
+      color: var(--text-secondary);
+      padding: 2px 10px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .sm-rec-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .sm-rec-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      border-top: 1px solid var(--border-light);
+      padding-top: 10px;
+    }
+    /* 更新列表 */
+    .sm-update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sm-update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--surface);
+      border-radius: var(--radius-small);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .sm-update-item:hover {
+      box-shadow: var(--shadow-md);
+    }
+    .sm-update-badge {
+      background: var(--brand-gold);
+      color: var(--brand-dark);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+    .sm-update-content {
+      flex: 1;
+    }
+    .sm-update-title {
+      font-weight: 700;
+      color: var(--brand-dark);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .sm-update-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .sm-update-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    /* 分类入口 */
+    .sm-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .sm-cat-item {
+      background: var(--surface);
+      border-radius: var(--radius-small);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: var(--brand-dark);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .sm-cat-item:hover {
+      background: var(--brand-dark);
+      color: #fff;
+    }
+    .sm-cat-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--brand-soft);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .sm-cat-item:hover .sm-cat-icon {
+      background: rgba(255,255,255,0.2);
+    }
+    /* 深度解析双栏 */
+    .sm-deep-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .sm-deep-text {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .sm-deep-text p {
+      margin-bottom: 20px;
+    }
+    .sm-deep-text h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 24px 0 12px;
+    }
+    .sm-deep-side {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sm-side-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .sm-side-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand-gold);
+      line-height: 1;
+    }
+    .sm-side-content h4 {
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+    .sm-side-content p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    /* FAQ 手风琴 */
+    .sm-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sm-faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-small);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .sm-faq-question {
+      padding: 18px 24px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .sm-faq-question:hover {
+      background: var(--brand-soft);
+    }
+    .sm-faq-answer {
+      padding: 0 24px 20px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      display: none;
+    }
+    .sm-faq-item.active .sm-faq-answer {
+      display: block;
+    }
+    .sm-faq-item.active .sm-faq-question {
+      background: var(--brand-soft);
+    }
+    /* 评论 */
+    .sm-comments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .sm-comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-small);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sm-comment-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .sm-comment-user {
+      font-weight: 700;
+      color: var(--brand-dark);
+      font-size: 0.9rem;
+    }
+    .sm-comment-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .sm-comment-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    /* 资讯卡片 */
+    .sm-news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .sm-news-card {
+      background: var(--surface);
+      border-radius: var(--radius-small);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .sm-news-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+    .sm-news-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .sm-news-title {
+      font-weight: 700;
+      color: var(--brand-dark);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .sm-news-summary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    /* 页脚 */
+    .sm-footer {
+      background: var(--brand-dark);
+      color: #b0b8c9;
+      padding: 48px 0 32px;
+      margin-top: 20px;
+    }
+    .sm-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .sm-footer-brand {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .sm-footer-brand span {
+      color: var(--brand-gold);
+    }
+    .sm-footer-links {
+      display: flex;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+    .sm-footer-col h4 {
+      color: #fff;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .sm-footer-col a {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .sm-footer-col a:hover {
+      color: var(--brand-gold);
+    }
+    .sm-footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .sm-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .sm-grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .sm-deep-grid { grid-template-columns: 1fr; }
+      .sm-nav-links { display: none; }
+      .sm-menu-btn { display: block; }
+      .sm-hero h1 { font-size: 2.2rem; }
+    }
+    @media (max-width: 768px) {
+      .sm-container { padding: 0 16px; }
+      .sm-grid-4 { grid-template-columns: 1fr; }
+      .sm-grid-3 { grid-template-columns: 1fr; }
+      .sm-cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .sm-comments-grid { grid-template-columns: 1fr; }
+      .sm-news-grid { grid-template-columns: 1fr; }
+      .sm-hero h1 { font-size: 1.8rem; }
+      .sm-hero-search { flex-direction: column; padding: 16px; border-radius: 24px; }
+      .sm-hero-search input { width: 100%; padding: 10px; }
+      .sm-hero-search button { width: 100%; margin-top: 8px; }
+      .sm-footer-inner { flex-direction: column; }
+      .sm-navbar { height: 64px; }
+      .sm-search-mini { display: none; }
+      .sm-section { padding: 40px 0; }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="sm-header">
+  <div class="sm-container">
+    <div class="sm-navbar">
+      <a href="/" class="sm-logo">
+        <span class="sm-logo-icon">神</span>
+        <span>神马影视</span>
+      </a>
+      <nav class="sm-nav-links">
+        <a href="/#home">首页</a>
+        <a href="/#hot-recommend">热播推荐</a>
+        <a href="/#latest-update">最新更新</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">影迷评论</a>
+      </nav>
+      <div class="sm-nav-actions">
+        <div class="sm-search-mini">
+          <span>🔍</span>
+          <input type="text" placeholder="搜索影视剧...">
+        </div>
+        <button class="sm-menu-btn" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Banner 区域 -->
+  <section class="sm-hero" id="home">
+    <div class="sm-container sm-hero-content">
+      <h1>神马影视 · <span>发现好剧，拒绝片荒</span></h1>
+      <p class="sm-hero-desc">聚合全网热播剧集、高分电影与口碑综艺，提供深度解析与真实用户评价。<br>从悬疑烧脑到治愈甜宠，从院线大片到小众纪录片，一站看全。</p>
+      <div class="sm-hero-search">
+        <input type="text" placeholder="输入剧名、演员或关键词，如「漫长的季节」">
+        <button>搜索</button>
+      </div>
+      <div class="sm-hero-tags">
+        <a href="/#hot-recommend">热播剧集</a>
+        <a href="/#latest-update">最新上线</a>
+        <a href="/#deep-analysis">高分解析</a>
+        <a href="/#comments">影迷热议</a>
+        <a href="/#genre">悬疑剧场</a>
+        <a href="/#genre">都市情感</a>
+        <a href="/#genre">古装权谋</a>
+        <a href="/#news">影视资讯</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门内容推荐 -->
+  <section class="sm-section" id="hot-recommend">
+    <div class="sm-container">
+      <h2 class="sm-section-title">🔥 本周热门推荐</h2>
+      <p class="sm-section-sub">根据近7天播放与讨论热度精选，涵盖不同类型</p>
+      <div class="sm-grid-4">
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad1" style="background: linear-gradient(145deg, #d4a373, #b5835a);">漫长的季节</div>
+          <div class="sm-rec-title">漫长的季节</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">悬疑</span>
+            <span class="sm-rec-tag">家庭</span>
+            <span class="sm-rec-tag">豆瓣9.4</span>
+          </div>
+          <div class="sm-rec-desc">范伟秦昊联手，跨越二十年的悬案与救赎。生活流悬疑，后劲十足。</div>
+          <div class="sm-rec-meta"><span>热度 9865</span><span>全12集</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad2" style="background: linear-gradient(145deg, #6b8cae, #3a6ea5);">繁花</div>
+          <div class="sm-rec-title">繁花</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">年代</span>
+            <span class="sm-rec-tag">商战</span>
+            <span class="sm-rec-tag">王家卫</span>
+          </div>
+          <div class="sm-rec-desc">胡歌马伊琍演绎90年代上海滩，光影美学与沪语对白，腔调十足。</div>
+          <div class="sm-rec-meta"><span>热度 9421</span><span>全30集</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad3" style="background: linear-gradient(145deg, #b8c6db, #8a9bb5);">庆余年2</div>
+          <div class="sm-rec-title">庆余年2</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">古装</span>
+            <span class="sm-rec-tag">权谋</span>
+            <span class="sm-rec-tag">爽剧</span>
+          </div>
+          <div class="sm-rec-desc">范闲假死归来，京都风云再起。原班人马，轻喜剧权谋，下饭首选。</div>
+          <div class="sm-rec-meta"><span>热度 9203</span><span>全36集</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad4" style="background: linear-gradient(145deg, #c3a0c9, #9b7b9e);">我的阿勒泰</div>
+          <div class="sm-rec-title">我的阿勒泰</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">文艺</span>
+            <span class="sm-rec-tag">治愈</span>
+            <span class="sm-rec-tag">8集短剧</span>
+          </div>
+          <div class="sm-rec-desc">马伊琍周依然演绎北疆生活，散文诗般的镜头，治愈系数拉满。</div>
+          <div class="sm-rec-meta"><span>热度 8856</span><span>全8集</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad5" style="background: linear-gradient(145deg, #a3c9b8, #6b9e8a);">周处除三害</div>
+          <div class="sm-rec-title">周处除三害</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">犯罪</span>
+            <span class="sm-rec-tag">动作</span>
+            <span class="sm-rec-tag">阮经天</span>
+          </div>
+          <div class="sm-rec-desc">阮经天贡献封神演技，暴力美学与邪教批判，近年最爽台片。</div>
+          <div class="sm-rec-meta"><span>热度 8602</span><span>电影</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad6" style="background: linear-gradient(145deg, #f0b8b8, #d98c8c);">与凤行</div>
+          <div class="sm-rec-title">与凤行</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">仙侠</span>
+            <span class="sm-rec-tag">赵丽颖</span>
+            <span class="sm-rec-tag">轻喜剧</span>
+          </div>
+          <div class="sm-rec-desc">赵丽颖林更新二搭，女强男弱仙侠设定，特效在线，甜度超标。</div>
+          <div class="sm-rec-meta"><span>热度 8377</span><span>全39集</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad1" style="background: linear-gradient(145deg, #f5c542, #e6a830);">棋士</div>
+          <div class="sm-rec-title">棋士</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">悬疑</span>
+            <span class="sm-rec-tag">犯罪</span>
+            <span class="sm-rec-tag">王宝强</span>
+          </div>
+          <div class="sm-rec-desc">王宝强回归剧圈，围棋老师卷入罪案，高智商博弈，开局即高能。</div>
+          <div class="sm-rec-meta"><span>热度 8201</span><span>更新中</span></div>
+        </div>
+        <div class="sm-card sm-rec-card">
+          <div class="sm-rec-cover grad2" style="background: linear-gradient(145deg, #6b8cae, #3a6ea5);">你想活出怎样的人生</div>
+          <div class="sm-rec-title">你想活出怎样的人生</div>
+          <div class="sm-rec-tags">
+            <span class="sm-rec-tag">动画</span>
+            <span class="sm-rec-tag">宫崎骏</span>
+            <span class="sm-rec-tag">奇幻</span>
+          </div>
+          <div class="sm-rec-desc">宫崎骏半自传式告别之作，奇幻世界观与人生哲思，值得二刷。</div>
+          <div class="sm-rec-meta"><span>热度 7985</span><span>电影</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="sm-section" id="latest-update" style="background: #fff;">
+    <div class="sm-container">
+      <h2 class="sm-section-title">📺 最新更新动态</h2>
+      <p class="sm-section-sub">截至2026年11月7日，这些内容刚刚上线或更新</p>
+      <div class="sm-update-list">
+        <div class="sm-update-item">
+          <span class="sm-update-badge">新上线</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《猎罪图鉴3》全集上线</div>
+            <div class="sm-update-desc">檀健次金世佳再度联手，模拟画像师与刑警队长破解连环迷案。</div>
+          </div>
+          <span class="sm-update-time">11月7日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">更新EP08</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《大江大河之岁月如歌》</div>
+            <div class="sm-update-desc">王凯杨烁演绎改革浪潮，最新一集宋运辉面临重大抉择。</div>
+          </div>
+          <span class="sm-update-time">11月6日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">开播</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《狐妖小红娘·月红篇》</div>
+            <div class="sm-update-desc">杨幂龚俊主演，国漫改编古装奇幻，首更4集，服化道精美。</div>
+          </div>
+          <span class="sm-update-time">11月5日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">完结</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《看不见影子的少年》</div>
+            <div class="sm-update-desc">张颂文荣梓杉悬疑短剧，大结局反转引热议，豆瓣开分8.1。</div>
+          </div>
+          <span class="sm-update-time">11月4日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">预告</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《庆余年3》首支预告发布</div>
+            <div class="sm-update-desc">张若昀陈道明回归，终极权谋之战，预计2027年上线。</div>
+          </div>
+          <span class="sm-update-time">11月3日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">定档</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《封神第二部》定档春节</div>
+            <div class="sm-update-desc">乌尔善执导，西岐之战全面升级，视效镜头超过2000个。</div>
+          </div>
+          <span class="sm-update-time">11月2日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">更新EP12</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《小巷人家》</div>
+            <div class="sm-update-desc">闫妮李光洁年代生活剧，豆瓣8.3，最新一集庄图南高考放榜。</div>
+          </div>
+          <span class="sm-update-time">11月1日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">上线</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《黑白密码》</div>
+            <div class="sm-update-desc">王子奇苏晓彤二搭，西部警匪悬疑，快节奏强情节。</div>
+          </div>
+          <span class="sm-update-time">10月31日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">纪录片</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《何以中国》第二季</div>
+            <div class="sm-update-desc">大型人文历史纪录片，探源中华文明，画面质感不输电影。</div>
+          </div>
+          <span class="sm-update-time">10月30日</span>
+        </div>
+        <div class="sm-update-item">
+          <span class="sm-update-badge">综艺</span>
+          <div class="sm-update-content">
+            <div class="sm-update-title">《喜人奇妙夜》收官</div>
+            <div class="sm-update-desc">年度喜剧综艺黑马，决赛作品《八十一难》封神，评分9.0。</div>
+          </div>
+          <span class="sm-update-time">10月29日</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="sm-section" id="genre" style="padding-top: 0;">
+    <div class="sm-container">
+      <h2 class="sm-section-title">🎬 按类型发现好内容</h2>
+      <p class="sm-section-sub">快速定位你感兴趣的类型</p>
+      <div class="sm-cat-grid">
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">🔍</span>悬疑剧场</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">🏙️</span>都市情感</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">🏯</span>古装权谋</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">😂</span>喜剧解压</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">⚔️</span>动作犯罪</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">🌸</span>仙侠奇幻</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">📖</span>历史传记</a>
+        <a href="/#hot-recommend" class="sm-cat-item"><span class="sm-cat-icon">🌿</span>治愈文艺</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="sm-section" id="deep-analysis" style="background: #fff;">
+    <div class="sm-container">
+      <h2 class="sm-section-title">📝 深度解析：神马影视为何值得反复刷</h2>
+      <p class="sm-section-sub">从内容选择到观看体验，为你拆解</p>
+      <div class="sm-deep-grid">
+        <div class="sm-deep-text">
+          <p>在信息过载的时代，选择看什么比看本身更耗费精力。神马影视作为一个影视内容聚合与推荐平台，核心价值在于帮用户缩短决策路径——通过编辑精选、真实用户评分和热度趋势，让好内容更快被看见。无论是刚上线的热播剧，还是被时间验证的经典老片，都能在这里找到清晰的入口。</p>
+          <p>从内容类型来看，神马影视覆盖了悬疑、都市、古装、喜剧、动作、仙侠、历史、文艺等主流品类，并持续追踪短剧、纪录片、综艺等细分领域。每个品类下都有对应的深度推荐与解析，比如悬疑剧专题会拆解叙事结构、反转设计；都市剧则会讨论人物关系与情感共鸣点。这种分类不依赖算法黑箱，而是基于编辑团队的人工筛选与社区讨论热度，因此参考价值更直观。</p>
+          <h3>人物与表演：好故事的基石</h3>
+          <p>一部剧能否留住观众，演员与角色的契合度至关重要。神马影视的解析模块会关注主演的过往作品、表演风格以及角色适配度。例如范伟在《漫长的季节》中饰演的王响，将一个普通父亲的执拗与脆弱刻画得入木三分；而胡歌在《繁花》中则褪去古装滤镜，演绎出阿宝的精明与情义。这些细节分析能帮助观众判断是否对味。</p>
+          <h3>节奏与消费体验</h3>
+          <p>长剧集与短剧的节奏差异极大。神马影视在推荐时会标注剧集长度、单集时长、更新速度，并给出「下饭」「烧脑」「治愈」等体验标签。对于时间碎片化的用户，8集短剧《我的阿勒泰》可能比40集长剧更合适；而喜欢沉浸式追剧的用户，则可以从「全36集已完结」的《庆余年2》开始一气呵成。</p>
+        </div>
+        <div class="sm-deep-side">
+          <div class="sm-side-item">
+            <span class="sm-side-num">01</span>
+            <div class="sm-side-content">
+              <h4>类型覆盖广</h4>
+              <p>从悬疑到甜宠，从院线大片到网络短剧，满足不同观看场景。</p>
+            </div>
+          </div>
+          <div class="sm-side-item">
+            <span class="sm-side-num">02</span>
+            <div class="sm-side-content">
+              <h4>编辑真人筛选</h4>
+              <p>拒绝纯算法堆砌，每部推荐都有编辑短评与看点提炼。</p>
+            </div>
+          </div>
+          <div class="sm-side-item">
+            <span class="sm-side-num">03</span>
+            <div class="sm-side-content">
+              <h4>更新及时</h4>
+              <p>热播剧集每日追踪，上线/完结/预告第一时间同步。</p>
+            </div>
+          </div>
+          <div class="sm-side-item">
+            <span class="sm-side-num">04</span>
+            <div class="sm-side-content">
+              <h4>社区真实讨论</h4>
+              <p>用户评论不水军，长短评结合，提前避雷或种草。</p>
+            </div>
+          </div>
+          <div class="sm-side-item">
+            <span class="sm-side-num">05</span>
+            <div class="sm-side-content">
+              <h4>移动端友好</h4>
+              <p>页面自适应，在地铁或床上都能舒适浏览。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sm-section" id="faq">
+    <div class="sm-container">
+      <h2 class="sm-section-title">❓ 常见问题</h2>
+      <p class="sm-section-sub">关于神马影视的疑问，这里都有答案</p>
+      <div class="sm-faq-list">
+        <div class="sm-faq-item active">
+          <div class="sm-faq-question">神马影视主要推荐什么类型的剧集？ <span>▼</span></div>
+          <div class="sm-faq-answer">神马影视覆盖悬疑、都市、古装、喜剧、动作、仙侠、历史、文艺等主流类型，同时关注短剧、纪录片和综艺。编辑部会根据近期热度和口碑进行人工筛选，确保推荐内容既有大众爆款，也有小众佳作。</div>
+        </div>
+        <div class="sm-faq-item">
+          <div class="sm-faq-question">如何快速找到适合自己口味的剧？ <span>▼</span></div>
+          <div class="sm-faq-answer">可以通过顶部的分类入口按类型筛选，或查看「热门推荐」中的标签（如「烧脑」「下饭」「治愈」）。每张卡片都附有简短看点，帮助你判断是否对味。如果不想踩雷，也可以先看用户评论区的真实反馈。</div>
+        </div>
+        <div class="sm-faq-item">
+          <div class="sm-faq-question">页面上的评分和热度是真实的吗？ <span>▼</span></div>
+          <div class="sm-faq-answer">热度值综合了站内点击、搜索和评论互动数据，评分则参考了编辑评分与用户平均打分。我们不会虚构数据，但热度会随时间波动，建议作为参考而非唯一标准。</div>
+        </div>
+        <div class="sm-faq-item">
+          <div class="sm-faq-question">神马影视会收录短剧或微短剧吗？ <span>▼</span></div>
+          <div class="sm-faq-answer">会。短剧是当下重要的内容形态，我们专门在「最新更新」和分类中增加了短剧相关推荐，包括每集时长、总集数等实用信息，方便用户根据碎片时间选择。</div>
+        </div>
+        <div class="sm-faq-item">
+          <div class="sm-faq-question">可以在神马影视直接观看视频吗？ <span>▼</span></div>
+          <div class="sm-faq-answer">神马影视是内容推荐与导览平台，主要提供信息聚合、深度解析和社区讨论。我们不为盗版内容提供播放源，推荐的均是正规平台上线内容，你可以根据指引前往对应平台观看。</div>
+        </div>
+        <div class="sm-faq-item">
+          <div class="sm-faq-question">怎么参与评论或提交想看的内容？ <span>▼</span></div>
+          <div class="sm-faq-answer">当前页面底部设有用户评论展示区，未来我们将开放注册与投稿通道。你可以先通过搜索框查找感兴趣的内容，若未收录，欢迎通过页脚联系方式反馈，我们会评估后补充。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="sm-section" id="comments" style="background: #fff;">
+    <div class="sm-container">
+      <h2 class="sm-section-title">💬 影迷真实评论</h2>
+      <p class="sm-section-sub">近30天用户留言精选，好评差评都有参考价值</p>
+      <div class="sm-comments-grid">
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">追剧小马达</span><span class="sm-comment-date">2026-11-06</span></div>
+          <div class="sm-comment-text">《漫长的季节》后劲太大了，看完三天没缓过来。神马影视的解析写得挺到位，把王响这个角色的复杂性说透了。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">Kiko_206</span><span class="sm-comment-date">2026-11-05</span></div>
+          <div class="sm-comment-text">繁花的沪语版才是灵魂！画面太精致了，每一帧都能当壁纸。不过剧情节奏偏慢，急性子可能不太适应。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">长安十二辰</span><span class="sm-comment-date">2026-11-04</span></div>
+          <div class="sm-comment-text">庆余年2还是熟悉的味道，范闲嘴炮功力不减。神马影视更新提醒很及时，不用自己到处搜什么时候播。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">橘子汽水</span><span class="sm-comment-date">2026-11-03</span></div>
+          <div class="sm-comment-text">我的阿勒泰才8集，一个周末就看完了，画面美到窒息。希望多推荐点这种短小精悍的剧。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">硬核悬疑迷</span><span class="sm-comment-date">2026-11-02</span></div>
+          <div class="sm-comment-text">棋士王宝强的演技进步很大，但剧情逻辑有些硬伤。神马影视能给7.5分我觉得合理，没有无脑吹。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">小笼包不加糖</span><span class="sm-comment-date">2026-11-01</span></div>
+          <div class="sm-comment-text">与凤行特效确实花了钱，但剧情有点低幼。赵丽颖和林更新的CP感还是有的，下饭可以。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">夜航星</span><span class="sm-comment-date">2026-10-30</span></div>
+          <div class="sm-comment-text">周处除三害在影院看的，阮经天邪教那场戏简直炸裂。神马影视的标签很准，确实是犯罪爽片。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">一颗奶糖</span><span class="sm-comment-date">2026-10-29</span></div>
+          <div class="sm-comment-text">希望增加更多韩剧和美剧的推荐，现在国产剧占比太高了，偶尔也想换换口味。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">夏日漱石</span><span class="sm-comment-date">2026-10-28</span></div>
+          <div class="sm-comment-text">看神马影视的解析入了《小巷人家》的坑，闫妮演得太好了，烟火气十足，比那些悬浮剧强太多。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">momo</span><span class="sm-comment-date">2026-10-27</span></div>
+          <div class="sm-comment-text">页面挺清爽的，没有乱七八糟的弹窗。找剧方便，就是搜索框有时候反应有点慢，希望优化。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">冬眠中</span><span class="sm-comment-date">2026-10-26</span></div>
+          <div class="sm-comment-text">猎罪图鉴3比第二季好，案件更紧凑了。这种单元剧适合我这种没时间追长剧的人。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">Ad Astra</span><span class="sm-comment-date">2026-10-25</span></div>
+          <div class="sm-comment-text">宫崎骏新片在神马影视看到了解析，很多隐喻解读很受启发。希望多出一些动画电影的深度文章。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">小城故事多</span><span class="sm-comment-date">2026-10-24</span></div>
+          <div class="sm-comment-text">狐妖小红娘月红篇特效不错，但漫改还是容易水土不服。神马影视的点评挺客观的，没有无脑吹。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">燕麦拿铁</span><span class="sm-comment-date">2026-10-23</span></div>
+          <div class="sm-comment-text">最近剧荒，靠神马影视的榜单找到了《大江大河3》，正剧质量还是在线的，推荐。</div>
+        </div>
+        <div class="sm-comment-item">
+          <div class="sm-comment-header"><span class="sm-comment-user">KK不熬夜</span><span class="sm-comment-date">2026-10-22</span></div>
+          <div class="sm-comment-text">评论区氛围不错，没有粉圈吵架。希望保持住，让大家能好好讨论剧情。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="sm-section" id="news">
+    <div class="sm-container">
+      <h2 class="sm-section-title">📰 影视资讯速递</h2>
+      <p class="sm-section-sub">行业动态、定档消息、幕后花絮</p>
+      <div class="sm-news-grid">
+        <div class="sm-news-card">
+          <div class="sm-news-date">2026-11-07</div>
+          <div class="sm-news-title">《庆余年3》首发预告，张若昀陈道明终极对决</div>
+          <div class="sm-news-summary">预告片24小时播放量破亿，范闲与庆帝的权谋大战即将拉开序幕，预计2027年Q1上线。</div>
+        </div>
+        <div class="sm-news-card">
+          <div class="sm-news-date">2026-11-06</div>
+          <div class="sm-news-title">《封神第二部》定档春节，西岐之战视效升级</div>
+          <div class="sm-news-summary">乌尔善导演透露第二部将有超过2000个特效镜头，闻仲与姜子牙的对决是最大看点。</div>
+        </div>
+        <div class="sm-news-card">
+          <div class="sm-news-date">2026-11-05</div>
+          <div class="sm-news-title">《猎罪图鉴3》开分8.5，创系列新高</div>
+          <div class="sm-news-summary">檀健次、金世佳默契升级，案件尺度更大，画像师模拟破案手法再进化。</div>
+        </div>
+        <div class="sm-news-card">
+          <div class="sm-news-date">2026-11-04</div>
+          <div class="sm-news-title">《我的阿勒泰》获亚洲电视大奖最佳短剧</div>
+          <div class="sm-news-summary">8集短剧击败多部长剧，散文诗风格和北疆风光获得国际评审认可。</div>
+        </div>
+        <div class="sm-news-card">
+          <div class="sm-news-date">2026-11-03</div>
+          <div class="sm-news-title">《喜人奇妙夜》决赛作品《八十一难》出圈</div>
+          <div class="sm-news-summary">喜剧综艺黑马收官，作品在社交媒体引发二创热潮，评分稳居9.0。</div>
+        </div>
+        <div class="sm-news-card">
+          <div class="sm-news-date">2026-11-01</div>
+          <div class="sm-news-title">多部短剧官宣定档11月，悬疑题材扎堆</div>
+          <div class="sm-news-summary">《黑白密码》《沉默的证明》等短剧陆续上线，每集15分钟，主打快节奏。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="sm-footer">
+  <div class="sm-container">
+    <div class="sm-footer-inner">
+      <div>
+        <div class="sm-footer-brand">神马<span>影视</span></div>
+        <p style="margin-top: 10px; font-size: 0.9rem; max-width: 300px;">聚合热播剧集、高分电影与口碑综艺，提供深度解析与真实用户评价。</p>
+      </div>
+      <div class="sm-footer-links">
+        <div class="sm-footer-col">
+          <h4>探索</h4>
+          <a href="/#hot-recommend">热门推荐</a>
+          <a href="/#latest-update">最新更新</a>
+          <a href="/#deep-analysis">深度解析</a>
+          <a href="/#comments">用户评论</a>
+        </div>
+        <div class="sm-footer-col">
+          <h4>类型</h4>
+          <a href="/#genre">悬疑剧场</a>
+          <a href="/#genre">都市情感</a>
+          <a href="/#genre">古装权谋</a>
+          <a href="/#genre">治愈文艺</a>
+        </div>
+        <div class="sm-footer-col">
+          <h4>关于</h4>
+          <a href="/#faq">常见问题</a>
+          <a href="/#news">影视资讯</a>
+          <a href="/#">联系我们</a>
+          <a href="/#">友情链接</a>
+        </div>
+      </div>
+    </div>
+    <div class="sm-footer-bottom">
+      <span>© 2026 神马影视 · 内容推荐与导览平台</span>
+      <span>免责声明：本站不提供影视资源存储，所有内容均来自正规平台，仅供交流参考。</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 简单的 FAQ 交互脚本 -->
+<script>
+  (function() {
+    var faqItems = document.querySelectorAll('.sm-faq-item');
+    faqItems.forEach(function(item) {
+      var question = item.querySelector('.sm-faq-question');
+      question.addEventListener('click', function() {
+        var isActive = item.classList.contains('active');
+        // 关闭其他
+        faqItems.forEach(function(other) {
+          other.classList.remove('active');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  })();
+</script>
+</body>
+                                                     </html>
